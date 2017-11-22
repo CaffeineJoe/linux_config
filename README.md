@@ -2,5 +2,7 @@
 
 User groups: wheel disk audio video cdrom optical storage input users
 
-Minimal Xorg installation: xorg-minimal xorg-fonts xterm setxkbmap 
+Minimal Xorg installation: xorg-minimal xorg-fonts xterm setxkbmap
+
+Additional Xorg related packages: xrandr 
 
