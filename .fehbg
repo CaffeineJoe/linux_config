@@ -1,0 +1,2 @@
+#!/bin/sh
+'feh' '--bg-scale' '--bg-scale' '/home/dcrisan/code/linux_config/wallpapers/left_1920_1200.jpg' '/home/dcrisan/code/linux_config/wallpapers/right_1440x900.jpg' 
