@@ -1,1 +1,2 @@
-URxvt.font:	xft:Tamsyn:pixelsize=12
+URxvt.font:		xft:Tamsyn:pixelsize=12
+URxvt.scrollBar:	false

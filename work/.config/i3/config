@@ -43,7 +43,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+a kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -fn 'Tamsyn-12px'
+bindsym $mod+d exec dmenu_run -b -fn 'Tamsyn-12px'
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -99,26 +99,56 @@ bindsym $mod+q focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+##### define workspaces #####
+#workspace 1: firefox
+set $wksp1  workspace "1: "
+$wksp1 output HDMI-0
+assign [class="Firefox"] 1: 
+
+#workspace 2: terminal
+set $wksp2  workspace "2: "
+$wksp2 output HDMI-0
+
+#workspace 3: C++ (rebel)
+set $wksp3  workspace "3: "
+$wksp3 output HDMI-0
+
+#workspace 4: misc (cogs)
+set $wksp4  workspace "4: "
+$wksp4 output HDMI-0
+
+#workspace 5: chromium
+set $wksp5  workspace "5: "
+$wksp5 output VGA-0
+
+#workspace 6: Java (empire)
+set $wksp6  workspace "6: "
+$wksp6 output VGA-0
+
+#workspace 7: misc (cogs)
+set $wksp7  workspace "7: "
+$wksp7 output VGA-0
+
 # switch to workspace
-bindsym $mod+ampersand workspace "1: "
-bindsym $mod+eacute workspace "2: "
-bindsym $mod+quotedbl workspace "3: "
-bindsym $mod+apostrophe workspace 4
-bindsym $mod+parenleft workspace 5
-bindsym $mod+minus workspace 6
-bindsym $mod+egrave workspace 7
+bindsym $mod+ampersand $wksp1
+bindsym $mod+eacute $wksp2 
+bindsym $mod+quotedbl $wksp3 
+bindsym $mod+apostrophe $wksp4
+bindsym $mod+parenleft $wksp5
+bindsym $mod+minus $wksp6 
+bindsym $mod+egrave $wksp7
 bindsym $mod+underscore workspace 8
 bindsym $mod+ccedilla workspace 9
 bindsym $mod+agrave workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+ampersand move container to workspace "1: "
-bindsym $mod+Shift+eacute move container to workspace "2: "
-bindsym $mod+Shift+quotedbl move container to workspace "3: "
-bindsym $mod+Shift+apostrophe move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+minus move container to workspace 6
-bindsym $mod+Shift+egrave move container to workspace 7
+bindsym $mod+Shift+ampersand move container to $wksp1 
+bindsym $mod+Shift+eacute move container to $wksp2 
+bindsym $mod+Shift+quotedbl move container to $wksp3 
+bindsym $mod+Shift+apostrophe move container to $wksp4
+bindsym $mod+Shift+5 move container to $wksp5
+bindsym $mod+Shift+minus move container to $wksp6
+bindsym $mod+Shift+egrave move container to $wksp7
 bindsym $mod+Shift+underscore move container to workspace 8
 bindsym $mod+Shift+ccedilla move container to workspace 9
 bindsym $mod+Shift+agrave move container to workspace 10
@@ -159,6 +189,7 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+	position top
         status_command i3status
 	font pango:FontAwesome, Tamsyn 12px
 	strip_workspace_numbers no
@@ -166,3 +197,5 @@ bar {
 
 #i3 startup
 exec_always --no-startup-id /usr/bin/feh --bg-scale --bg-scale '/home/dcrisan/code/linux_config/wallpapers/left_1920x1200.jpg' '/home/dcrisan/code/linux_config/wallpapers/right_1920x1200.jpg'
+
+#exec --no-startup-id firefox
