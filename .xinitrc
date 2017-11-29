@@ -48,8 +48,5 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-#set wallpapers
-~/.fehbg &
-
 #start i3-gaps
 exec i3
