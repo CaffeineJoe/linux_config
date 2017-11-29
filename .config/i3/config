@@ -160,5 +160,5 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
-	font pango:Tamsyn 14px 
+	font pango:Tamsyn 12px 
 }
