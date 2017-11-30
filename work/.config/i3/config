@@ -101,32 +101,32 @@ bindsym $mod+q focus parent
 
 ##### define workspaces #####
 #workspace 1: firefox
-set $wksp1  workspace "1: "
+set $wksp1 workspace "1: "
 $wksp1 output HDMI-0
 assign [class="Firefox"] 1: 
 
 #workspace 2: terminal
-set $wksp2  workspace "2: "
+set $wksp2 workspace "2: "
 $wksp2 output HDMI-0
 
 #workspace 3: C++ (rebel)
-set $wksp3  workspace "3: "
+set $wksp3 workspace "3: "
 $wksp3 output HDMI-0
 
 #workspace 4: misc (cogs)
-set $wksp4  workspace "4: "
+set $wksp4 workspace "4: "
 $wksp4 output HDMI-0
 
 #workspace 5: chromium
-set $wksp5  workspace "5: "
+set $wksp5 workspace "5: "
 $wksp5 output VGA-0
 
 #workspace 6: Java (empire)
-set $wksp6  workspace "6: "
+set $wksp6 workspace "6: "
 $wksp6 output VGA-0
 
 #workspace 7: misc (cogs)
-set $wksp7  workspace "7: "
+set $wksp7 workspace "7: "
 $wksp7 output VGA-0
 
 # switch to workspace
