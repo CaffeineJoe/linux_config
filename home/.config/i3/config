@@ -16,9 +16,9 @@ set $mod Mod1
 font pango:monospace 8
 
 #i3-gaps configuration
-for_window [class="^.*"] border pixel 0
-gaps inner 5
-gaps outer 10
+for_window [class="^.*"] border pixel 1
+gaps inner 10
+gaps outer -5
 smart_gaps on
 smart_borders on
 
@@ -43,7 +43,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+a kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -b -fn 'Tamsyn-12px'
+bindsym $mod+d exec dmenu_run -b -fn 'Tamsyn-10px'
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -147,7 +147,13 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 # lock i3
-bindsym Mod4+l exec --no-startup-id "i3lock -i $HOME/code/linux_config/wallpapers/lock_home.png"
+bindsym Mod4+l exec --no-startup-id "i3lock -c 999999"
+
+# reboot system
+bindsym Mod4+Shift+r exec "i3-nagbar -t warning -m 'You pressed the reboot shortcut. Do you really want to reboot? This will end your X session.' -b 'Yes, reboot' 'sudo reboot'"
+
+# shutdown system
+bindsym Mod4+Shift+x exec "i3-nagbar -t warning -m 'You pressed the shutdown shortcut. Do you really want to shutdown the PC? This will end your X session.' -b 'Yes, shutdown' 'sudo shutdown -h now'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -185,5 +191,5 @@ bar {
 }
 
 #i3 startup
-exec_always --no-startup-id /usr/bin/feh --bg-scale --bg-scale '/home/dcrisan/code/linux_config/wallpapers/left_1920x1200.jpg' '/home/dcrisan/code/linux_config/wallpapers/right_1440x900.jpg'
+exec_always --no-startup-id /usr/bin/feh --bg-scale --bg-scale '/home/dcrisan/code/linux_config/wallpapers/left_1920x1200.jpg' '/home/dcrisan/code/linux_config/wallpapers/right_1920x1200.jpg'
 

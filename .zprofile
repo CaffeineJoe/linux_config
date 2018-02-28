@@ -1,5 +1,6 @@
-#Start X on login on tty1 only
+export CONFIG_DIR=$HOME/code/linux_config
 
+#Start X on login on tty1 only
 if [ -z "$DISPLAY" ] && [ "$(fgconsole)" -eq 1 ]; then
 	exec startx
 fi
