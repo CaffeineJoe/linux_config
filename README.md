@@ -12,6 +12,6 @@ Minimal Xorg installation: xorg-minimal xorg-fonts xterm setxkbmap
 
 Additional Xorg related packages: xrandr, xset, xlsfont 
 
-Useful packages: font-tamsyn, neovim, firefox
+Useful packages: feh, font-tamsyn, neovim, firefox, chromium, zathura zathura-pdf-mupdf
 
 ### Test
