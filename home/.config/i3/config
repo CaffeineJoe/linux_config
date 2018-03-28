@@ -100,20 +100,20 @@ bindsym $mod+q focus parent
 #bindsym $mod+d focus child
 
 ##### define workspaces #####
-#workspace 1: firefox
-set $wksp1 workspace "1: "
+#workspace 1: terminal
+set $wksp1 workspace "1: "
 $wksp1 output HDMI-0
 
-#workspace 2: terminal
-set $wksp2 workspace "2: "
+#workspace 2: code/js
+set $wksp2 workspace "2: "
 $wksp2 output HDMI-0
 
-#workspace 3: firefox
-set $wksp3 workspace "3: "
+#workspace 3: chrome
+set $wksp3 workspace "3: "
 $wksp3 output DVI-I-1
 
-#workspace 4: terminal
-set $wksp4 workspace "4: "
+#workspace 4: docs
+set $wksp4 workspace "4: "
 $wksp4 output DVI-I-1
 
 # switch to workspace
