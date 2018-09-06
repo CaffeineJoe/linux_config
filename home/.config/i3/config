@@ -105,7 +105,7 @@ set $wksp1 workspace "1: "
 $wksp1 output HDMI-0
 
 #workspace 2: code/js
-set $wksp2 workspace "2: "
+set $wksp2 workspace "2: "
 $wksp2 output HDMI-0
 
 #workspace 3: chrome

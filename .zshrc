@@ -16,4 +16,4 @@ promptinit
 prompt oliver 
 
 alias a="ls -lah --color=auto"
-alias c="cd $HOME/code/linux_config"
+alias c="cd $HOME/code"

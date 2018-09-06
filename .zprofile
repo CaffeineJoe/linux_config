@@ -1,4 +1,5 @@
 export CONFIG_DIR=$HOME/code/linux_config
+export PATH=~/bin:$PATH
 
 #Start X on login on tty1 only
 if [ -z "$DISPLAY" ] && [ "$(fgconsole)" -eq 1 ]; then
