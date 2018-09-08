@@ -191,5 +191,5 @@ bar {
 }
 
 #i3 startup
-exec_always --no-startup-id /usr/bin/feh --bg-scale --bg-scale '/home/dcrisan/code/linux_config/wallpapers/left_1920x1200.jpg' '/home/dcrisan/code/linux_config/wallpapers/right_1920x1200.jpg'
+exec_always --no-startup-id /usr/bin/feh --bg-scale --bg-scale '/home/dcrisan/code/linux_config/home/wallpapers/left_1920x1200.jpg' '/home/dcrisan/code/linux_config/home/wallpapers/right_1920x1200.jpg'
 
