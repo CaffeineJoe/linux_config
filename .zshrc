@@ -13,7 +13,9 @@ compinit
 
 autoload -U promptinit
 promptinit
-prompt oliver 
+prompt oliver
+
+eval "$(dircolors ~/dircolors)"
 
 alias a="ls -lah --color=auto"
 alias c="cd $HOME/code"
