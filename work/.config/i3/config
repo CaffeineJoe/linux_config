@@ -16,7 +16,7 @@ set $mod Mod1
 font pango:monospace 8
 
 #i3-gaps configuration
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 1
 gaps inner 10
 gaps outer -5
 smart_gaps on
@@ -100,26 +100,27 @@ bindsym $mod+q focus parent
 #bindsym $mod+d focus child
 
 ##### define workspaces #####
-#workspace 1: firefox
-set $wksp1 workspace "1: "
+#workspace 1: terminal
+set $wksp1 workspace "1: "
 $wksp1 output HDMI-0
-assign [class="Firefox"] 1: 
 
-#workspace 2: terminal
-set $wksp2 workspace "2: "
+#workspace 2: personal / firefox
+set $wksp2 workspace "2: "
 $wksp2 output HDMI-0
+assign [class="Firefox"] 2: 
 
 #workspace 3: C++ (rebel)
 set $wksp3 workspace "3: "
 $wksp3 output HDMI-0
 
-#workspace 4: misc (cogs)
-set $wksp4 workspace "4: "
+#workspace 4: books : docs (doc)
+set $wksp4 workspace "4: "
 $wksp4 output HDMI-0
 
-#workspace 5: chromium
-set $wksp5 workspace "5: "
+#workspace 5: work / chromium
+set $wksp5 workspace "5: "
 $wksp5 output VGA-0
+assign [class="Chromium"] 5: 
 
 #workspace 6: Java (empire)
 set $wksp6 workspace "6: "
