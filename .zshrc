@@ -17,5 +17,7 @@ prompt oliver
 
 eval "$(dircolors ~/dircolors)"
 
+alias ls="ls --color=auto"
 alias a="ls -lah --color=auto"
 alias c="cd $HOME/code"
+alias e="nvim"

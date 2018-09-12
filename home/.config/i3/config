@@ -108,25 +108,35 @@ $wksp1 output HDMI-0
 set $wksp2 workspace "2: "
 $wksp2 output HDMI-0
 
-#workspace 3: chrome
-set $wksp3 workspace "3: "
-$wksp3 output DVI-I-1
+#workspace 3: docs left screen
+set $wksp3 workspace "3: "
+$wksp3 output HDMI-0
 
-#workspace 4: docs
-set $wksp4 workspace "4: "
+#workspace 4: chromium
+set $wksp4 workspace "4: "
 $wksp4 output DVI-I-1
+assign [class="Chromium"] 4: 
+
+#workspace 5: firefox
+set $wksp5 workspace "5: "
+$wksp5 output DVI-I-1
+assign [class="Firefox"] 5: 
+
+#workspace 6: docs left screen
+set $wksp6 workspace "6: "
+$wksp6 output DVI-I-1
 
 # switch to workspace
 bindsym $mod+ampersand $wksp1
 bindsym $mod+eacute $wksp2 
 bindsym $mod+quotedbl $wksp3 
 bindsym $mod+apostrophe $wksp4
-bindsym $mod+parenleft workspace 5
-bindsym $mod+minus workspace 6 
-bindsym $mod+egrave workspace 7
-bindsym $mod+underscore workspace 8
-bindsym $mod+ccedilla workspace 9
-bindsym $mod+agrave workspace 10
+bindsym $mod+parenleft $wksp5
+bindsym $mod+minus $wksp6 
+bindsym $mod+egrave $wksp7
+bindsym $mod+underscore $wksp8
+bindsym $mod+ccedilla $wksp9
+bindsym $mod+agrave $wksp10
 
 # move focused container to workspace
 bindsym $mod+Shift+ampersand move container to $wksp1 
