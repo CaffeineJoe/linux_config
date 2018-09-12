@@ -1,5 +1,6 @@
 # dircolors specification
 # lifted from: Sebastian Tramp - http://sebastian.tramp.name
+# copied & adapted from: https://github.com/koreymacdougall/config_files
 
 # Term Section
 TERM Eterm
@@ -87,48 +88,48 @@ TERM xterm-termite
 
 ## Special files
 
-NORMAL 00;38;5;256      # no color code at all
-FILE 00                 # regular file: use no color at all
-RESET 0                 # reset to "normal" color
-DIR 00;38;5;214          # directory
-LINK 07;38;5;37         # symbolic link
-EXEC 00;38;5;160        # This is for files with execute permission:
+NORMAL	00;38;5;256	# no color code at all
+FILE 	00		# regular file: use no color at all
+RESET 	0		# reset to "normal" color
+DIR 	00;38;5;214	# directory
+LINK 	07;38;5;37	# symbolic link
+EXEC 	00;38;5;160      # This is for files with execute permission:
 
 
-## Archives or compressed (violet + bold for compression)
-.tar    00;38;5;231
-.tgz    00;38;5;231
-.arj    00;38;5;231
-.taz    00;38;5;231
-.lzh    00;38;5;231
-.lzma   00;38;5;231
-.tlz    00;38;5;231
-.txz    00;38;5;231
+## Archives or compressed (Orange4)
+.tar    00;38;5;94
+.tgz    00;38;5;94
+.arj    00;38;5;94
+.taz    00;38;5;94
+.lzh    00;38;5;94
+.lzma   00;38;5;94
+.tlz    00;38;5;94
+.txz    00;38;5;94
 .zip    00;38;5;94
-.z      00;38;5;231
-.Z      00;38;5;231
-.dz     00;38;5;231
-.gz     00;38;5;231
-.lz     00;38;5;231
-.xz     00;38;5;231
-.bz2    00;38;5;231
-.bz     00;38;5;231
-.tbz    00;38;5;231
-.tbz2   00;38;5;231
-.tz     00;38;5;231
-.deb    00;38;5;231
-.rpm    00;38;5;231
-.jar    00;38;5;231
-.rar    00;38;5;231
-.ace    00;38;5;231
-.zoo    00;38;5;231
-.cpio   00;38;5;231
-.7z     00;38;5;231
-.rz     00;38;5;231
-.apk    00;38;5;231
-.gem    00;38;5;231
+.z      00;38;5;94
+.Z      00;38;5;94
+.dz     00;38;5;94
+.gz     00;38;5;94
+.lz     00;38;5;94
+.xz     00;38;5;94
+.bz2    00;38;5;94
+.bz     00;38;5;94
+.tbz    00;38;5;94
+.tbz2   00;38;5;94
+.tz     00;38;5;94
+.deb    00;38;5;94
+.rpm    00;38;5;94
+.jar    00;38;5;94
+.rar    00;38;5;94
+.ace    00;38;5;94
+.zoo    00;38;5;94
+.cpio   00;38;5;94
+.7z     00;38;5;94
+.rz     00;38;5;94
+.apk    00;38;5;94
+.gem    00;38;5;94
 
-# Image formats (pink)
+# Image formats (Magenta1)
 .jpg    00;38;5;201
 .JPG    00;38;5;201
 .jpeg   00;38;5;201
@@ -158,11 +159,11 @@ EXEC 00;38;5;160        # This is for files with execute permission:
 .ico    00;38;5;201
 .eps    00;38;5;201
 
-# config files (light gren)
+# config files (Aquamarine1)
 *rc              38;5;122
 *conf            38;5;122
 
-# Audio formats (blue)
+# Audio formats (CornflowerBlue)
 .aac    00;38;5;69
 .au     00;38;5;69
 .flac   00;38;5;69
@@ -180,56 +181,59 @@ EXEC 00;38;5;160        # This is for files with execute permission:
 .spx    00;38;5;69
 .xspf   00;38;5;69
 
-# Video formats (as audio + bold)
-.mov    00;38;5;166
-.MOV    00;38;5;166
-.mpg    00;38;5;166
-.mpeg   00;38;5;166
-.m2v    00;38;5;166
-.mkv    00;38;5;166
-.ogm    00;38;5;166
-.mp4    01;38;5;69
-.m4v    00;38;5;166
-.mp4v   00;38;5;166
-.vob    00;38;5;166
-.qt     00;38;5;166
-.nuv    00;38;5;166
-.wmv    00;38;5;166
-.asf    00;38;5;166
-.rm     00;38;5;166
-.rmvb   00;38;5;166
-.flc    00;38;5;166
-.avi    00;38;5;166
-.fli    00;38;5;166
-.flv    00;38;5;166
-.gl     00;38;5;166
-.m2ts   00;38;5;166
-.divx   00;38;5;166
-.webm   00;38;5;166
-.axv    00;38;5;166
-.anx    00;38;5;166
-.ogv    00;38;5;166
-.ogx    00;38;5;166
+# Video formats (ConrflowerBlue)
+.mov    00;38;5;69
+.MOV    00;38;5;69
+.mpg    00;38;5;69
+.mpeg   00;38;5;69
+.m2v    00;38;5;69
+.mkv    00;38;5;69
+.ogm    00;38;5;69
+.mp4    00;38;5;69
+.m4v    00;38;5;69
+.mp4v   00;38;5;69
+.vob    00;38;5;69
+.qt     00;38;5;69
+.nuv    00;38;5;69
+.wmv    00;38;5;69
+.asf    00;38;5;69
+.rm     00;38;5;69
+.rmvb   00;38;5;69
+.flc    00;38;5;69
+.avi    00;38;5;69
+.fli    00;38;5;69
+.flv    00;38;5;69
+.gl     00;38;5;69
+.m2ts   00;38;5;69
+.divx   00;38;5;69
+.webm   00;38;5;69
+.axv    00;38;5;69
+.anx    00;38;5;69
+.ogv    00;38;5;69
+.ogx    00;38;5;69
 
 
 
 ### document file ###
-.tex  00;38;5;148
-.xml  00;38;5;148
-.rib  00;38;5;148
-.cpp  00;38;5;148
-.h    00;38;5;148
-.o    00;38;5;148
-.sl   00;38;5;148
-.md   00;38;5;148
-*README.markdown 00;38;5;148
-*Makefile  00;38;5;148
+.tex			00;38;5;190
+.xml			00;38;5;190
+.rib			00;38;5;190
+.cpp  			00;38;5;190
+.h    			00;38;5;190
+.java 			00;38;5;190
+.js			00;38;5;190
+.py			00;38;5;190
+.o    			00;38;5;190
+.sl   			00;38;5;190
+.md			00;38;5;190
+*README.markdown	00;38;5;148
+*Makefile  		00;38;5;148
 
 
 ### office format ###
 *.pdf   00;38;5;29
-*.doc   04;38;5;009
-*.docx  04;38;5;009
-*.ppt   04;38;5;009
-*.pptx  04;38;5;009
-*.xls   04;38;5;009
+*.doc   00;38;5;29
+*.docx  00;38;5;29
+*.ppt   00;38;5;29
+*.pptx  00;38;5;29
+*.xls   00;38;5;29
