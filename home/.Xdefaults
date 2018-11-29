@@ -6,5 +6,5 @@ URxvt.shading:		110
 URxvt.*background:	black
 URxvt.*foreground:	white
 
-Xft.dpi:        	82
-Xft.antialias:  	true
+#Xft.dpi:        	82
+#Xft.antialias:  	true
