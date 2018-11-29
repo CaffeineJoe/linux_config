@@ -91,9 +91,9 @@ TERM xterm-termite
 NORMAL	00;38;5;256	# no color code at all
 FILE 	00		# regular file: use no color at all
 RESET 	0		# reset to "normal" color
-DIR 	01;38;5;214	# directory
+DIR 	00;38;5;214	# directory
 LINK 	07;38;5;37	# symbolic link
-EXEC 	00;38;5;160      # This is for files with execute permission:
+EXEC 	00;38;5;160     # This is for files with execute permission:
 
 
 ## Archives or compressed (Orange4)
