@@ -22,24 +22,29 @@ colors
 autoload -Uz vcs_info
 zstyle 'vcs_info:*' enable git
 zstyle ':vcs_info:*' stagedstr '%083F●%f '
-zstyle ':vcs_info:*' unstagedstr '%227F●%f '
+zstyle ':vcs_info:*' unstagedstr '%166F●%f '
 zstyle ':vcs_info:git*' check-for-changes true
 zstyle ':vcs_info:git*' formats "%193F%b%f %u%c"
 zstyle ':vcs_info:git*' actionformats "%193F%b (%a)%f %u%c%"
 
 precmd() {
-  vcs_info
-  if [[ -n "${vcs_info_msg_0_}" ]]; then
-#    vcs_info_msg=%045F$(git rev-parse --short=8 HEAD)%f${vcs_info_msg_0_}  
-    vcs_info_sha=%193F$(git rev-parse --short=8 HEAD)%f
-  else
-    unset vcs_info_sha	  
-  fi
+    local sha ahead
+
+    vcs_info
+    if [[ -n "${vcs_info_msg_0_}" ]]; then
+        sha=$(git rev-parse --short=8 HEAD)
+        ahead=$(git rev-list origin..$sha | wc -l)
+        if [[ $ahead -gt 0 ]]; then
+            vcs_info_msg_0_=${vcs_info_msg_0_}%033F▲$ahead%f" "%193F"➜ "$sha%f
+        else
+            vcs_info_msg_0_=${vcs_info_msg_0_}%193F"➜ "$sha%f
+        fi    
+    fi
 }
 
 setopt prompt_subst
-PROMPT=%B%(!.%F{red}[%n" "%m]%f.%F{default}[%n" "%m]%f)%b%214F[%f$'${vcs_info_msg_0_}'%214F%1~]%f%B%(!.%F{red}%#%f.%F{default}%#%f)%b" "
-RPROMPT=$'${vcs_info_sha}'
+PROMPT=%B%(!.%F{red}[%n" "%m]%f.%F{default}[%n" "%m]%f)%b%214F[%f%214F%1~]%f%B%(!.%F{red}%#%f.%F{default}%#%f)%b" "
+RPROMPT=$'${vcs_info_msg_0_}'
 
 eval "$(dircolors ~/dircolors)"
 
