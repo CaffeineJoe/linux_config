@@ -5,7 +5,7 @@ SAVEHIST=1000
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/dcrisan/.zshrc'
+zstyle :compinstall filename '/home/dcr/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -40,10 +40,26 @@ precmd() {
             vcs_info_msg_0_=${vcs_info_msg_0_}%193F"➜ "$sha%f
         fi    
     fi
+    
+    curr_dir=${PWD/#$HOME/\~}
+    curr_dir=(${(s:/:)PWD/#$HOME/\~})
+    if [ ${#curr_dir} -eq 0 ]; then
+        short_path=%214F"/"%f
+    elif [ ${#curr_dir} -eq 1 ] && [ $curr_dir[1] = '~' ]; then 
+        short_path=%214F"~"%f
+    else
+        short_path=("")
+        for (( i=1; i<${#curr_dir}; i++ ));
+        do
+            short_path+=(%058F${curr_dir[$i]:0:1}%f)
+        done
+        short_path+=(%214F${curr_dir[$#curr_dir]}%f)
+        short_path=${(j:%214F/%f:)short_path}
+    fi
 }
 
 setopt prompt_subst
-PROMPT=%B%(!.%F{red}[%n" "%m]%f.%F{default}[%n" "%m]%f)%b%214F[%f%214F%1~]%f%B%(!.%F{red}%#%f.%F{default}%#%f)%b" "
+PROMPT=%B%(!.%F{red}[%n" "%m]%f.%F{default}[%n" "%m]%f)%b%214F[%f$'${short_path}'%214F]%f%B%(!.%F{red}%#%f.%F{default}%#%f)%b" "
 RPROMPT=$'${vcs_info_msg_0_}'
 
 eval "$(dircolors ~/dircolors)"
