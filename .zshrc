@@ -43,12 +43,13 @@ precmd() {
     
     curr_dir=${PWD/#$HOME/\~}
     curr_dir=(${(s:/:)PWD/#$HOME/\~})
+    short_path=()
     if [ ${#curr_dir} -eq 0 ]; then
         short_path=%214F"/"%f
-    elif [ ${#curr_dir} -eq 1 ] && [ $curr_dir[1] = '~' ]; then 
-        short_path=%214F"~"%f
     else
-        short_path=("")
+	if [ "${curr_dir[1]}" != '~' ]; then	
+            short_path+=("")
+	fi
         for (( i=1; i<${#curr_dir}; i++ ));
         do
             short_path+=(%058F${curr_dir[$i]:0:1}%f)
