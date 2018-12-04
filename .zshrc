@@ -52,7 +52,11 @@ precmd() {
 	fi
         for (( i=1; i<${#curr_dir}; i++ ));
         do
-            short_path+=(%058F${curr_dir[$i]:0:1}%f)
+            if [[ "${curr_dir[$i]}" = $'.'* ]]; then
+                short_path+=(%058F${curr_dir[$i]:0:2}%f)
+            else
+                short_path+=(%058F${curr_dir[$i]:0:1}%f)
+            fi
         done
         short_path+=(%214F${curr_dir[$#curr_dir]}%f)
         short_path=${(j:%214F/%f:)short_path}
