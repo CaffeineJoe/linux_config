@@ -59,7 +59,7 @@ precmd() {
             fi
         done
         short_path+=(%214F${curr_dir[$#curr_dir]}%f)
-        short_path=${(j:%214F/%f:)short_path}
+        short_path=${(j:%058F/%f:)short_path}
     fi
 }
 
