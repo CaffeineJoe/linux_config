@@ -109,26 +109,34 @@ set $wksp2 workspace "2: "
 $wksp2 output HDMI-0
 assign [class="Firefox"] 2: 
 
-#workspace 3: C++ (rebel)
-set $wksp3 workspace "3: "
+#workspace 3: code left screen
+set $wksp3 workspace "3: "
 $wksp3 output HDMI-0
-
-#workspace 4: books : docs (doc)
+ 
+#workspace 4: docs left screen
 set $wksp4 workspace "4: "
 $wksp4 output HDMI-0
+ 
+#workspace 5: misc left screen
+set $wksp5 workspace "5: "
+$wksp5 output HDMI-0
 
-#workspace 5: work / chromium
-set $wksp5 workspace "5: "
-$wksp5 output VGA-0
-assign [class="Chromium"] 5: 
-
-#workspace 6: Java (empire)
-set $wksp6 workspace "6: "
+#workspace 6: work / chromium
+set $wksp6 workspace "6: "
 $wksp6 output VGA-0
+assign [class="Chromium"] 6: 
 
-#workspace 7: misc (cogs)
-set $wksp7 workspace "7: "
+#workspace 7: code right screen
+set $wksp7 workspace "7: "
 $wksp7 output VGA-0
+ 
+#workspace 8: docs right screen
+set $wksp8 workspace "8: "
+$wksp8 output VGA-0
+
+#workspace 9: misc right screen
+set $wksp9 workspace "9: "
+$wksp9 output VGA-0 
 
 # switch to workspace
 bindsym $mod+ampersand $wksp1
@@ -138,8 +146,8 @@ bindsym $mod+apostrophe $wksp4
 bindsym $mod+parenleft $wksp5
 bindsym $mod+minus $wksp6 
 bindsym $mod+egrave $wksp7
-bindsym $mod+underscore workspace 8
-bindsym $mod+ccedilla workspace 9
+bindsym $mod+underscore $wksp8
+bindsym $mod+ccedilla $wksp9
 bindsym $mod+agrave workspace 10
 
 # move focused container to workspace
