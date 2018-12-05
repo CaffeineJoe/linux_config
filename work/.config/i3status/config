@@ -15,6 +15,7 @@ order += "tztime local"
 order += "disk /"
 order += "disk /home"
 order += "ethernet _first_"
+order += "volume master"
 order += "cpu_usage"
 #order += "cpu_usage 1"
 #order += "cpu_usage 2"
@@ -43,6 +44,14 @@ disk "/home" {
         format = "  %used Used, %avail Avail"
 	threshold_type = "gbytes_avail"
 	low_threshold = 7
+}
+
+volume master {
+    format = "♪: %volume"
+    format_muted = "♪: muted (%volume)"
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
 }
 
 cpu_usage {
