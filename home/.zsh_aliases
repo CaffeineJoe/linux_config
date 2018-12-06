@@ -1,0 +1,7 @@
+alias ls="ls --color=auto"
+alias a="ls -lah --color=auto"
+alias c="cd $HOME/code"
+alias e="nvim"
+alias p="pwd"
+alias vup="amixer set Master 10%+"
+alias vdown="amixer set Master 10%-"

@@ -24,8 +24,8 @@ zstyle 'vcs_info:*' enable git
 zstyle ':vcs_info:*' stagedstr '%083F●%f '
 zstyle ':vcs_info:*' unstagedstr '%166F●%f '
 zstyle ':vcs_info:git*' check-for-changes true
-zstyle ':vcs_info:git*' formats "%193F%b%f %u%c"
-zstyle ':vcs_info:git*' actionformats "%193F%b (%a)%f %u%c%"
+zstyle ':vcs_info:git*' formats "%193F[%b%f %u%c"
+zstyle ':vcs_info:git*' actionformats "%193F[%b (%a)%f %u%c%"
 
 precmd() {
     local sha ahead
@@ -35,9 +35,9 @@ precmd() {
         sha=$(git rev-parse --short=8 HEAD)
         ahead=$(git rev-list origin..$sha | wc -l)
         if [[ $ahead -gt 0 ]]; then
-            vcs_info_msg_0_=${vcs_info_msg_0_}%033F▲$ahead%f" "%193F"➜ "$sha%f
+            vcs_info_msg_0_=${vcs_info_msg_0_}%033F▲$ahead%f" "%193F"➜ "$sha]%f
         else
-            vcs_info_msg_0_=${vcs_info_msg_0_}%193F"➜ "$sha%f
+            vcs_info_msg_0_=${vcs_info_msg_0_}%193F"➜ "$sha]%f
         fi    
     fi
     
@@ -64,13 +64,9 @@ precmd() {
 }
 
 setopt prompt_subst
-PROMPT=%B%(!.%F{red}[%n" "%m]%f.%F{default}[%n" "%m]%f)%b%214F[%f$'${short_path}'%214F]%f%B%(!.%F{red}%#%f.%F{default}%#%f)%b" "
-RPROMPT=$'${vcs_info_msg_0_}'
+PROMPT=%B%(!.%F{red}[%n" "%m]%f.%F{default}[%n" "%m]%f)%b%214F[%f$'${short_path}'%214F]%f$'${vcs_info_msg_0_}'$'\n'" "%B%(!.%F{red}%#%f.%F{default}%#%f)%b" "
+#RPROMPT=$'${vcs_info_msg_0_}'
 
 eval "$(dircolors ~/dircolors)"
 
-alias ls="ls --color=auto"
-alias a="ls -lah --color=auto"
-alias c="cd $HOME/code"
-alias e="nvim"
-alias p="pwd"
+. $HOME/.zsh_aliases
