@@ -1,0 +1,10 @@
+alias ls="ls --color=auto"
+alias a="ls -lah --color=auto"
+alias c="cd $HOME/code"
+alias dc="cd /mnt/debian/home/dcr/code"
+alias e="nvim"
+alias p="pwd"
+alias e="rm -rf Simulator/Generated && /mnt/debian/home/dcr/code/CAF/install/bin/EngineBuilder -s build --clean --jse"
+alias s="/mnt/debian/home/dcr/code/CAF/install/bin/Studio &"
+alias d="cd ./Simulator/Generated/Build/JavaSparkEngine/JSEProject/"
+
