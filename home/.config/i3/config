@@ -155,12 +155,12 @@ bindsym $mod+Shift+ampersand move container to $wksp1
 bindsym $mod+Shift+eacute move container to $wksp2 
 bindsym $mod+Shift+quotedbl move container to $wksp3 
 bindsym $mod+Shift+apostrophe move container to $wksp4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+minus move container to workspace 6
-bindsym $mod+Shift+egrave move container to workspace 7
-bindsym $mod+Shift+underscore move container to workspace 8
-bindsym $mod+Shift+ccedilla move container to workspace 9
-bindsym $mod+Shift+agrave move container to workspace 10
+bindsym $mod+Shift+5 move container to $wksp5
+bindsym $mod+Shift+minus move container to $wksp6
+bindsym $mod+Shift+egrave move container to $wksp7
+bindsym $mod+Shift+underscore move container to $wksp8
+bindsym $mod+Shift+ccedilla move container to $wksp9
+bindsym $mod+Shift+agrave move container to $wksp10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
