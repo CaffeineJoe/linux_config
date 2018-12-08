@@ -32,7 +32,7 @@ ethernet _first_ {
 
 tztime date {
     format = "<span color='#A8BCD2'>%time</span>"
-    format_time = "%a. %d/%m/%Y %H:%M"
+    format_time = "%a. %d/%m/%Y"
 }
 
 tztime hour {

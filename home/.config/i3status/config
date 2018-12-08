@@ -32,7 +32,7 @@ ethernet _first_ {
 
 tztime date {
     format = "<span color='#A8BCD2'>%time</span>"
-    format_time = "%a. %d/%m/%Y %H:%M"
+    format_time = "%a. %d/%m/%Y"
 }
 
 tztime hour {
@@ -64,8 +64,7 @@ cpu_usage {
 volume master {
     format = "<span color='#9B703F'>vol: %volume</span>"
     format_muted = "<span color='#FF0000'>vol: 0%%</span>"
-    device = "default"
-    mixer = "Master"
-    mixer_idx = 0
+    device = "hw:0"
+    mixer = "Headphone"
+    #mixer_idx = 0
 }
-
