@@ -14,6 +14,7 @@ general {
 }
 
 order += "cpu_usage all"
+order += "disk /mnt/debian"
 order += "disk /home"
 order += "disk /"
 order += "ethernet _first_"
@@ -51,6 +52,14 @@ disk "/" {
 disk "/home" {
 	prefix_type = "custom"
     format = "<span color='#167FD1'>%avail</span>"
+    format_below_threshold = "<span color='#FF0000'>/ %avail</span>"
+	threshold_type = "gbytes_avail"
+	low_threshold = 7
+}
+
+disk "/mnt/debian" {
+	prefix_type = "custom"
+    format = "<span color='#5F87FF'>%avail</span>"
     format_below_threshold = "<span color='#FF0000'>/ %avail</span>"
 	threshold_type = "gbytes_avail"
 	low_threshold = 7
