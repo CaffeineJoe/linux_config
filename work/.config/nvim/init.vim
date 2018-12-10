@@ -5,3 +5,7 @@ set number
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
+syntax on
+highlight Comment ctermfg=33
+
