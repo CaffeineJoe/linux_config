@@ -1,7 +1,0 @@
-URxvt.font:		xft:Tamsyn:pixelsize=14
-URxvt.scrollBar:	false
-URxvt.transparent:      true
-URxvt.shading:          110
-
-URxvt.*background:      black
-URxvt.*foreground:      white

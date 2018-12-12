@@ -43,7 +43,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+a kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -b -fn 'Tamsyn-10px'
+bindsym $mod+d exec dmenu_run -b -fn 'Tamsyn-12px'
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -123,20 +123,20 @@ $wksp5 output HDMI-0
 
 #workspace 6: chromium
 set $wksp6 workspace "6: "
-$wksp6 output DVI-I-1
+$wksp6 output VGA-0
 assign [class="Chromium"] 6: 
 
 #workspace 7: code right screen
 set $wksp7 workspace "7: "
-$wksp7 output DVI-I-1
-
+$wksp7 output VGA-0
+ 
 #workspace 8: docs right screen
 set $wksp8 workspace "8: "
-$wksp8 output DVI-I-1
+$wksp8 output VGA-0
 
 #workspace 9: misc right screen
 set $wksp9 workspace "9: "
-$wksp9 output DVI-I-1
+$wksp9 output VGA-0 
 
 # switch to workspace
 bindsym $mod+ampersand $wksp1
@@ -179,26 +179,26 @@ bindsym Mod4+Shift+x exec "i3-nagbar -t warning -m 'You pressed the shutdown sho
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+    # These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym m resize grow width 10 px or 10 ppt
+    # Pressing left will shrink the window’s width.
+    # Pressing right will grow the window’s width.
+    # Pressing up will shrink the window’s height.
+    # Pressing down will grow the window’s height.
+    bindsym j resize shrink width 10 px or 10 ppt
+    bindsym k resize grow height 10 px or 10 ppt
+    bindsym l resize shrink height 10 px or 10 ppt
+    bindsym m resize grow width 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+    # same bindings, but for the arrow keys
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 bindsym $mod+r mode "resize"
@@ -213,5 +213,5 @@ bar {
 }
 
 #i3 startup
-exec_always --no-startup-id /usr/bin/feh --bg-scale --bg-scale '/home/dcr/code/linux_config/home/wallpapers/left_1920x1200.jpg' '/home/dcr/code/linux_config/home/wallpapers/right_1920x1200.jpg'
+exec_always --no-startup-id /usr/bin/feh --bg-scale --bg-scale '~/wallpapers/left_1920x1080.jpg' '~/wallpapers/right_1920x1080.jpg'
 
