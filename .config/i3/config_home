@@ -213,5 +213,5 @@ bar {
 }
 
 #i3 startup
-exec_always --no-startup-id /usr/bin/feh --bg-scale --bg-scale '~/wallpapers/left_1920x1080.jpg' '~/wallpapers/right_1920x1080.jpg'
+exec_always --no-startup-id /usr/bin/feh --bg-scale --bg-scale ~/wallpapers/left_1920x1080.jpg ~/wallpapers/right_1920x1080.jpg
 
