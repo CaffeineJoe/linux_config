@@ -8,7 +8,7 @@ alias e="rm -rf Simulator/Generated && /mnt/debian/home/dcr/code/CAF/install/bin
 alias s="/mnt/debian/home/dcr/code/CAF/install/bin/Studio &"
 alias d="cd ./Simulator/Generated/Build/JavaSparkEngine/JSEProject/"
 alias u="cd ../../../../.."
-alias vup="amixer -c 3 set Headphone 10%+"
-alias vdown="amixer -c 3 set Headphone 10%-"
+alias vup="amixer -c 2 set Headphone 10%+"
+alias vdown="amixer -c 2 set Headphone 10%-"
 
 

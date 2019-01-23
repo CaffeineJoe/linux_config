@@ -28,12 +28,13 @@ zstyle ':vcs_info:git*' formats "%193F[%b%f %u%c"
 zstyle ':vcs_info:git*' actionformats "%193F[%b (%a)%f %u%c%"
 
 precmd() {
-    local sha ahead
+    local sha branch ahead
 
     vcs_info
     if [[ -n "${vcs_info_msg_0_}" ]]; then
         sha=$(git rev-parse --short=8 HEAD)
-        ahead=$(git rev-list origin..$sha | wc -l)
+        branch=$(git rev-parse --abbrev-ref HEAD)
+        ahead=$(git rev-list origin/$branch..$sha | wc -l)
         if [[ $ahead -gt 0 ]]; then
             vcs_info_msg_0_=${vcs_info_msg_0_}%033F▲$ahead%f" "%193F"➜ "$sha]%f
         else

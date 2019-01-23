@@ -70,7 +70,7 @@ cpu_usage {
 volume master {
     format = "<span color='#9B703F'>vol: %volume</span>"
     format_muted = "<span color='#FF0000'>vol: 0%%</span>"
-    device = "hw:3"
+    device = "hw:2"
     mixer = "Headphone"
 }
 
