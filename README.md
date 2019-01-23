@@ -12,7 +12,7 @@ Minimal Xorg installation: xorg-minimal xorg-fonts xterm setxkbmap
 
 Additional Xorg related packages: xrandr, xset, xlsfont 
 
-Useful packages: feh, font-tamsyn, neovim, neofetch, firefox, chromium, zathura zathura-pdf-mupdf acl-progs xtools alsa-utils
+Useful packages: feh, font-tamsyn, neovim, neofetch, firefox, chromium, zathura zathura-pdf-mupdf acl-progs xtools alsa-utils fonts-croscore-ttf-XXX
 
 Add alsa to teh list of running services
 
