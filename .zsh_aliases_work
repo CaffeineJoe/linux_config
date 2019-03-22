@@ -11,5 +11,4 @@ alias d="cd ./Generated/Build/JavaSparkEngine/JSEProject/"
 alias u="cd ../../../.."
 alias vup="amixer -c 2 set Headphone 10%+"
 alias vdown="amixer -c 2 set Headphone 10%-"
-
-
+alias voidupd="sudo xbps-install -Suv"
