@@ -65,8 +65,9 @@ precmd() {
 }
 
 setopt prompt_subst
-PROMPT=%B%(!.%F{red}[%n" "%m]%f.%F{default}[%n" "%m]%f)%b%214F[%f$'${short_path}'%214F]%f$'${vcs_info_msg_0_}'$'\n'" "%B%(!.%F{red}%#%f.%F{default}%#%f)%b" "
-#RPROMPT=$'${vcs_info_msg_0_}'
+# PROMPT with hostname & username
+#PROMPT=%B%(!.%F{red}[%n" "%m]%f.%F{default}[%n" "%m]%f)%b%214F[%f$'${short_path}'%214F]%f$'${vcs_info_msg_0_}'$'\n'" "%B%(!.%F{red}%#%f.%F{default}%#%f)%b" "
+PROMPT=%214F[%f$'${short_path}'%214F]%f$'${vcs_info_msg_0_}'$'\n'" "%B%(!.%F{red}%#%f.%F{default}%#%f)%b" "
 
 eval "$(dircolors ~/dircolors)"
 
