@@ -6,5 +6,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+colorscheme corvine 
+
 syntax on
-highlight Comment ctermfg=33
+"highlight Comment ctermfg=33
