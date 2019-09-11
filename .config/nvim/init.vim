@@ -6,7 +6,9 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
-colorscheme corvine 
-
 syntax on
-"highlight Comment ctermfg=33
+
+let g:jellybeans_overrides = {
+\    'background': { 'ctermbg': 'none', '256ctermbg': 'none' },
+\}
+colorscheme jellybeans

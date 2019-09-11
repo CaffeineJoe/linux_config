@@ -21,11 +21,11 @@ colors
 
 autoload -Uz vcs_info
 zstyle 'vcs_info:*' enable git
-zstyle ':vcs_info:*' stagedstr '%083F●%f '
-zstyle ':vcs_info:*' unstagedstr '%166F●%f '
+zstyle ':vcs_info:*' stagedstr '%2F●%f '
+zstyle ':vcs_info:*' unstagedstr '%1F●%f '
 zstyle ':vcs_info:git*' check-for-changes true
-zstyle ':vcs_info:git*' formats "%193F[%b%f %u%c"
-zstyle ':vcs_info:git*' actionformats "%193F[%b (%a)%f %u%c%"
+zstyle ':vcs_info:git*' formats "%2F[%b%f %u%c"
+zstyle ':vcs_info:git*' actionformats "%2F[%b (%a)%f %u%c%"
 
 precmd() {
     local sha branch ahead
@@ -36,9 +36,9 @@ precmd() {
         branch=$(git rev-parse --abbrev-ref HEAD)
         ahead=$(git rev-list origin/$branch..$sha | wc -l)
         if [[ $ahead -gt 0 ]]; then
-            vcs_info_msg_0_=${vcs_info_msg_0_}%033F▲$ahead%f" "%193F"➜ "$sha]%f
+            vcs_info_msg_0_=${vcs_info_msg_0_}%04F▲$ahead%f" "%2F"➜ "$sha]%f
         else
-            vcs_info_msg_0_=${vcs_info_msg_0_}%193F"➜ "$sha]%f
+            vcs_info_msg_0_=${vcs_info_msg_0_}%2F"➜ "$sha]%f
         fi    
     fi
     
@@ -46,7 +46,7 @@ precmd() {
     curr_dir=(${(s:/:)PWD/#$HOME/\~})
     short_path=()
     if [ ${#curr_dir} -eq 0 ]; then
-        short_path=%214F"/"%f
+        short_path=%3F"/"%f
     else
 	if [ "${curr_dir[1]}" != '~' ]; then	
             short_path+=("")
@@ -54,20 +54,20 @@ precmd() {
         for (( i=1; i<${#curr_dir}; i++ ));
         do
             if [[ "${curr_dir[$i]}" = $'.'* ]]; then
-                short_path+=(%058F${curr_dir[$i]:0:2}%f)
+                short_path+=(%7F${curr_dir[$i]:0:2}%f)
             else
-                short_path+=(%058F${curr_dir[$i]:0:1}%f)
+                short_path+=(%7F${curr_dir[$i]:0:1}%f)
             fi
         done
-        short_path+=(%214F${curr_dir[$#curr_dir]}%f)
-        short_path=${(j:%058F/%f:)short_path}
+        short_path+=(%3F${curr_dir[$#curr_dir]}%f)
+        short_path=${(j:%7F/%f:)short_path}
     fi
 }
 
 setopt prompt_subst
 # PROMPT with hostname & username
 #PROMPT=%B%(!.%F{red}[%n" "%m]%f.%F{default}[%n" "%m]%f)%b%214F[%f$'${short_path}'%214F]%f$'${vcs_info_msg_0_}'$'\n'" "%B%(!.%F{red}%#%f.%F{default}%#%f)%b" "
-PROMPT=%214F[%f$'${short_path}'%214F]%f$'${vcs_info_msg_0_}'$'\n'" "%B%(!.%F{red}%#%f.%F{default}%#%f)%b" "
+PROMPT=%3F[%f$'${short_path}'%3F]%f$'${vcs_info_msg_0_}'$'\n'" "%B%(!.%F{red}%#%f.%F{default}%#%f)%b" "
 
 eval "$(dircolors ~/dircolors)"
 

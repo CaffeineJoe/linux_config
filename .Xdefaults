@@ -1,10 +1,27 @@
-URxvt.font:		        xft:Tamsyn:pixelsize=14
-URxvt.scrollBar:	    false
-URxvt.transparent:	    true
-URxvt.shading:		    110
+URxvt.font:             xft:Tamsyn:pixelsize=14
+URxvt.scrollBar:        false
+URxvt.transparent:      true
+URxvt.shading:          110
 
-URxvt.*background:	    black
-URxvt.*foreground:	    white
+URxvt.*background:      black
+URxvt.*foreground:      white
 
 URxvt.urgentOnBell:     true
 URxvt.perl-ext-common:  bell-command
+
+*color0:  #3b3b3b
+*color1:  #cf6a4c
+*color2:  #99ad6a
+*color3:  #d8ad4c
+*color4:  #597bc5
+*color5:  #a037b0
+*color6:  #71b9f8
+*color7:  #adadad
+*color8:  #3b3b3b
+*color9:  #cf6a4c
+*color10:  #99ad6a
+*color11:  #d8ad4c
+*color12:  #597bc5
+*color13:  #a037b0
+*color14:  #71b9f8
+*color15:  #adadad
