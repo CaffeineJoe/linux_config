@@ -40,7 +40,7 @@ tztime hour {
 
 disk "/" {
 	prefix_type = "custom"
-    format = "<span color='#99ad6a'>root:%avail</span>"
+    format = "<span color='#99ad6a'>root: %avail</span>"
     format_below_threshold = "<span color='#FF0000'>root:%avail</span>"
 	threshold_type = "gbytes_avail"
 	low_threshold = 4
@@ -48,7 +48,7 @@ disk "/" {
 
 disk "/home" {
 	prefix_type = "custom"
-    format = "<span color='#99ad6a'>home:%avail</span>"
+    format = "<span color='#99ad6a'>home: %avail</span>"
     format_below_threshold = "<span color='#FF0000'>home:%avail</span>"
 	threshold_type = "gbytes_avail"
 	low_threshold = 7
@@ -56,7 +56,7 @@ disk "/home" {
 
 disk "/mnt/debian" {
     prefix_type = "custom"
-    format = "<span color='#99ad6a'>deb:%avail</span>"
+    format = "<span color='#99ad6a'>deb: %avail</span>"
     format_below_threshold = "<span color='#FF0000'>deb:%avail</span>"
     threshold_type = "gbytes_avail"
     low_threshold = 7
