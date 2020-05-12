@@ -50,10 +50,10 @@ bindsym $mod+d exec dmenu_run -b -fn 'Tamsyn-12px'
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+m focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -74,7 +74,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+n split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -123,44 +123,70 @@ $wksp5 output HDMI-0
 
 #workspace 6: chromium
 set $wksp6 workspace "6: "
-$wksp6 output VGA-0
+#$wksp6 output VGA-0
+$wksp6 output DVI-I-0
 assign [class="Chromium"] 6: 
 
 #workspace 7: code right screen
 set $wksp7 workspace "7: "
-$wksp7 output VGA-0
+$wksp7 output DVI-I-0
+#$wksp7 output VGA-0
  
 #workspace 8: docs right screen
 set $wksp8 workspace "8: "
-$wksp8 output VGA-0
+$wksp8 output DVI-I-0
+#$wksp8 output VGA-0
 
 #workspace 9: misc right screen
 set $wksp9 workspace "9: "
-$wksp9 output VGA-0 
+$wksp9 output DVI-I-0
+#$wksp9 output VGA-0 
 
 # switch to workspace
-bindsym $mod+ampersand $wksp1
-bindsym $mod+eacute $wksp2 
-bindsym $mod+quotedbl $wksp3 
-bindsym $mod+apostrophe $wksp4
-bindsym $mod+parenleft $wksp5
-bindsym $mod+minus $wksp6 
-bindsym $mod+egrave $wksp7
-bindsym $mod+underscore $wksp8
-bindsym $mod+ccedilla $wksp9
-bindsym $mod+agrave $wksp10
+bindsym $mod+1 $wksp1
+bindsym $mod+2 $wksp2 
+bindsym $mod+3 $wksp3 
+bindsym $mod+4 $wksp4
+bindsym $mod+5 $wksp5
+bindsym $mod+6 $wksp6 
+bindsym $mod+7 $wksp7
+bindsym $mod+8 $wksp8
+bindsym $mod+9 $wksp9
+bindsym $mod+0 $wksp10
+
+#bindsym $mod+ampersand $wksp1
+#bindsym $mod+eacute $wksp2 
+#bindsym $mod+quotedbl $wksp3 
+#bindsym $mod+apostrophe $wksp4
+#bindsym $mod+parenleft $wksp5
+#bindsym $mod+minus $wksp6 
+#bindsym $mod+egrave $wksp7
+#bindsym $mod+underscore $wksp8
+#bindsym $mod+ccedilla $wksp9
+#bindsym $mod+agrave $wksp10
 
 # move focused container to workspace
-bindsym $mod+Shift+ampersand move container to $wksp1 
-bindsym $mod+Shift+eacute move container to $wksp2 
-bindsym $mod+Shift+quotedbl move container to $wksp3 
-bindsym $mod+Shift+apostrophe move container to $wksp4
+bindsym $mod+Shift+1 move container to $wksp1 
+bindsym $mod+Shift+2 move container to $wksp2 
+bindsym $mod+Shift+3 move container to $wksp3 
+bindsym $mod+Shift+4 move container to $wksp4
 bindsym $mod+Shift+5 move container to $wksp5
-bindsym $mod+Shift+minus move container to $wksp6
-bindsym $mod+Shift+egrave move container to $wksp7
-bindsym $mod+Shift+underscore move container to $wksp8
-bindsym $mod+Shift+ccedilla move container to $wksp9
-bindsym $mod+Shift+agrave move container to $wksp10
+bindsym $mod+Shift+6 move container to $wksp6
+bindsym $mod+Shift+7 move container to $wksp7
+bindsym $mod+Shift+8 move container to $wksp8
+bindsym $mod+Shift+9 move container to $wksp9
+bindsym $mod+Shift+0 move container to $wksp10
+
+#bindsym $mod+Shift+ampersand move container to $wksp1 
+#bindsym $mod+Shift+eacute move container to $wksp2 
+#bindsym $mod+Shift+quotedbl move container to $wksp3 
+#bindsym $mod+Shift+apostrophe move container to $wksp4
+#bindsym $mod+Shift+5 move container to $wksp5
+#bindsym $mod+Shift+minus move container to $wksp6
+#bindsym $mod+Shift+egrave move container to $wksp7
+#bindsym $mod+Shift+underscore move container to $wksp8
+#bindsym $mod+Shift+ccedilla move container to $wksp9
+#bindsym $mod+Shift+agrave move container to $wksp10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -173,6 +199,9 @@ bindsym Mod4+l exec --no-startup-id "i3lock -c 999999"
 
 # reboot system
 bindsym Mod4+Shift+r exec "i3-nagbar -t warning -m 'You pressed the reboot shortcut. Do you really want to reboot? This will end your X session.' -b 'Yes, reboot' 'sudo reboot'"
+
+# sleep system
+bindsym Mod4+Shift+s exec "i3-nagbar -t warning -m 'You pressed the sleep shortcut. Do you really want to sleep the PC? This will end your X session.' -b 'Yes, sleep' 'sudo zzz'"
 
 # shutdown system
 bindsym Mod4+Shift+x exec "i3-nagbar -t warning -m 'You pressed the shutdown shortcut. Do you really want to shutdown the PC? This will end your X session.' -b 'Yes, shutdown' 'sudo shutdown -h now'"
