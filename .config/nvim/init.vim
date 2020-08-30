@@ -14,18 +14,21 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
-"set termguicolors
+set termguicolors
+set list
+set listchars=tab:<->,trail:~,eol:$,nbsp:%
 
 "Hide mode as it's already displayed by lightline
 set noshowmode
 
 syntax on
 
-let g:jellybeans_overrides = {
-\    'background': { 'ctermbg': '235', '256ctermbg': '235' },
-\}
-colorscheme jellybeans
-
 let g:lightline = {
 \ 'colorscheme': 'jellybeans',
 \ }
+
+let g:jellybeans_overrides = {
+\    'background': { 'ctermbg': 'none', '256ctermbg': 'none', 'guibg': 'none'},
+\}
+colorscheme jellybeans
+highlight CursorLineNr guifg=#d8ad4c
