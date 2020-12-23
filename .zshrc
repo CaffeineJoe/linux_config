@@ -85,12 +85,4 @@ eval "$(dircolors ~/dircolors)"
 # autoload edit-command-line; zle -N edit-command-line
 # bindkey '^o' edit-command-line
 
-#compdef csm
-_csm() {
-  eval $(env COMMANDLINE="${words[1,$CURRENT]}" _CSM_COMPLETE=complete-zsh  csm)
-}
-if [[ "$(basename -- ${(%):-%x})" != "_csm" ]]; then
-  compdef _csm csm
-fi
-
 . /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
